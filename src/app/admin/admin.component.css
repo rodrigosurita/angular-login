@@ -6,10 +6,6 @@
   height: calc(100vh - 64px);
 }
 
-#welcome-img{
-  width: 75%;
-}
-
 p{
   font-size: 18pt;
 }

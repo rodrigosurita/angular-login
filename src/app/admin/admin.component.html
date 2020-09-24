@@ -6,7 +6,7 @@
 
 <div class="container valign-wrapper">
 
-  <div class="row center">
+  <div class="row center" style="overflow: auto; width: 100%;">
 
     <div class="col s12">
       <p>Server data</p>
@@ -30,6 +30,9 @@
           </tr>
         </tbody>
       </table>
+
+      <span *ngIf="serverData.length <= 0">The server did not return any data!</span>
+
     </div>
 
     <div class="col s12" style="margin-top: 20px;">
