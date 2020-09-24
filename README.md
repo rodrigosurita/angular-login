@@ -2,7 +2,7 @@
 <h1 align="center" style="border-bottom: none;">:busts_in_silhouette: Angular Login App!</h1>
 <h3 align="center">This is a simple login application built using NodeJS and Angular JS. It can save sessions, keep you logged in and get server data after you log-in</h3>
 
-![Demo](https://github.com/rodrigosurita/chatbot-webhook-example/blob/master/readme_images/demo.PNG?raw=true)
+![Demo](https://github.com/rodrigosurita/angular-login/blob/master/images/home.PNG?raw=true)
 
 ---------------------------------------------------------------
 
@@ -12,10 +12,6 @@
 
 1. Download and install [Node.js](https://nodejs.org/en/).
 
-2. Download and install [MongoDB](https://www.mongodb.com/).
-    - Create a database
-    - Create a collection.
-
 ## Configuring the app
 
 1. Install the dependencies
@@ -24,122 +20,33 @@
     npm install
     ```
 
-1. Create a **.env** file inside the root folder of the app located in:
-    
-    `<project_root>/node-server`
-
-    - The content of the .env file must be:
-    ```
-        DB_URL = <MongoDB URL>
-        DB_NAME = <name>
-        HOST = <The url of the app, "http://127.0.0.1:8081" for example>
-        COLLECTION = <Collection that the app is going to use>
-    ```
-
-2. Run the application
+2. Navigate to "./backend", run the application
 
     ```
     npm start
     ```
 
-3. For this example to work correctly, the application must be published on a server. I recommend publishing on an [AWS server](https://aws.amazon.com/), where you are able to create a simple server and put it online for one year free of charge.
+Note: the NodeJS app is just an example, it validates only one fixed login, the user is "admin" and the password is "admin".
 
 ---------------------------------------------------------------
 
-# Chatbot
+# Angular App
 
 ## Prerequisites
 
-1. Sign up for an [IBM Cloud account](https://cloud.ibm.com/registration/).
-1. Create an instance of the Watson Assistant service and open the console.
-    - Go to the [Watson Assistant](https://cloud.ibm.com/catalog/services/conversation) page in the IBM Cloud Catalog
-    - Click **Create**
-    - Go to your [Resource List](https://cloud.ibm.com/resources) and select the previously create Watson Assistant service
-    - Click **Launch Watson Assistant** to open the console
+1. Install the angular CLI
 
-IBM divides a chatbot into **assistants** and **skills**, where assistants are the chatbots themselves and skills are the chatbot's ability to process language and respond, on the console you are able to associate a chatbot with a skill.
-
-## Creating the Skill for the chatbot
-
-1. In your IBM Cloud console, select the **Skills** option.
-
-2. Click **Create Skill**.
-
-3. Select **Dialog skill** and hit next.
-
-4. Select **Import skill** and upload the JSON located in:
-
-    `<project_root>/watson-assistant-skill/skill-Pizzaria.json`
-
-5. Click **Import**.
-
-## Configuring the Skill
-
-1. Open the skill **Pizzaria**.
-
-2. Click **Options** and then **Webhooks**.
-
-3. Fill in the URL field with:
-
-    `<YOUR HOST URL>/pizzaria/dashboard/webhook`
-
-    - The Node app must be published so the chatbot can send requests to it.
-
-## Creating the Assistant
-
-1. In your IBM Cloud console, select the **Assistant** option.
-
-2. Click **Create Assistant**.
-
-    - Enter tha name and the description and hit **create**.
-
-3. Select your assistant and click **Add dialog skill**.
-
-4. Select the **pizzaria** skill.
-
-4. Click **Integrate Web Chat** 
-
-- If you're using the *lite* plan, click *Try Plus Plan*, that's just for the automated WEB Integration, you can do it mannually through HTTP requests, check the [Watson Assistant API docs](https://cloud.ibm.com/apidocs/assistant/assistant-v2).
-
-5. Create an integration.
-
-6. Save your **integrationID**.
-
-7. Click **Save Changes**.
-
----------------------------------------------------------------
-
-# Web Chat
-
-## Configuring the Web Chat
-
-1. Open the file located in:
+    ```
+    npm install -g @angular/cli
+    ```
     
-    `<project_root>/web-site-chatbot-example/js/init.js`
+2. Go to the root folder and run the application
 
-2. Replace the text **INTEGRATION_ID** with your integrationID.
+    ```
+    npm start
+    ```
 
-3. Run the example located in:
-
-    `<project_root>/web-site-chatbot-example/index.html`
-
-# Testing
-
-1. Order a pizza in the WebChat or inside the IBM Console on the *Try It* option.
-
-2. Create an account on the Node app.
-
-3. Login after you made an order, the order should be listed on the main screen of the node app.
-
-![Demo2](https://github.com/rodrigosurita/chatbot-webhook-example/blob/master/readme_images/demo2.PNG?raw=true)
-
-[demo_url]: https://assistant-simple.ng.bluemix.net/
-[doc_intents]: https://cloud.ibm.com/docs/services/conversation/intents-entities.html#planning-your-entities
-[docs]: https://cloud.ibm.com/docs/services/assistant/index.html#index
-[docs_landing]: (https://cloud.ibm.com/docs/services/assistant/index.html#index)
-[node_link]: (http://nodejs.org/)
-[npm_link]: (https://www.npmjs.com/)
-[sign_up]: https://cloud.ibm.com/registration
+Note: if you change the Node app port you have to open the root/proxy-config.json and change the target property before runing the angular app.
 
 # CLI
 
@@ -148,3 +55,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+# Contact me
+
+[LinkedIn](https://www.linkedin.com/in/rodrigosurita/) - Rodrigo Surita
+[Instagram](https://www.instagram.com/rodrigosurita/) - @rodrigosurita
