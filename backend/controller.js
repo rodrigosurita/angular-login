@@ -56,7 +56,6 @@ exports.logout = async (req, res) => {
  * @param {object} res - response object
  */
 exports.loginCheck = async (req, res) => {
-  console.log('checandooo');
   if(req.session.user){
     res.status(200).json({
       success: true,
@@ -68,7 +67,28 @@ exports.loginCheck = async (req, res) => {
       message: 'user is not logged in'
     });
   }
+};
 
-
+exports.getData = async (req, res) => {
+  if(req.session.user){
+    res.status(200).json({
+      success: true,
+      data:[
+        {
+          name: 'Linkedin',
+          url: 'https://www.linkedin.com/in/rodrigosurita/'
+        },
+        {
+          name:'Instagram',
+          url:'https://www.instagram.com/rodrigosurita/'
+        }
+      ]
+    });
+  } else {
+    res.status(200).json({
+      success: false,
+      message: 'user is not logged in'
+    });
+  }
 };
 
