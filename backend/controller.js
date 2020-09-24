@@ -32,3 +32,20 @@ exports.loginSubmit = async (req, res) => {
 
   }
 };
+
+/**
+ * Logout the user by removing his session
+ *
+ * @param {object} req - request object
+ * @param {object} res - response object
+ */
+exports.logout = async (req, res) => {
+    //remove session
+    req.session.user = null;
+
+    res.status(200).json({
+      success: true,
+      message: 'logged out'
+    });
+};
+
