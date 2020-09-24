@@ -66,4 +66,5 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 # Contact me
 
 [LinkedIn](https://www.linkedin.com/in/rodrigosurita/) - Rodrigo Surita
+
 [Instagram](https://www.instagram.com/rodrigosurita/) - @rodrigosurita
