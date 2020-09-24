@@ -22,6 +22,9 @@ exports.loginSubmit = async (req, res) => {
 
   } else {
 
+    //remove session
+    req.session.user = null;
+
     res.status(200).json({
       success: false,
       message: 'Incorrect username or password.'
