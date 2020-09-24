@@ -4,4 +4,4 @@ var express = require('express'),
 
 app.listen(port);
 
-console.log('Angular App RESTful API server started on port: ' + port);
+console.log('Angular App - RESTful API server started on port: ' + port);
