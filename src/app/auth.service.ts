@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 interface myData {
   success: boolean,
@@ -19,13 +20,15 @@ export class AuthService {
     this.loggedInStatus = value;
   }
 
-  get isLoggedIn() {
-    return this.loggedInStatus;
+  isLoggedIn(): Observable<any>{
+    return this.http.get<any>('http://localhost:7000/auth/check', {
+      withCredentials: true
+    });
   }
 
   getUserDetails(username, password) {
     // post details to API server, return user info if correct
-    return this.http.post<myData> ('/api/login/submit', {
+    return this.http.post<myData> ('/api/auth/submit', {
       username,
       password
     },{

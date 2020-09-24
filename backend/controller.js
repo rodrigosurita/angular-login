@@ -49,3 +49,25 @@ exports.logout = async (req, res) => {
     });
 };
 
+/**
+ * Check if the user is logged in
+ *
+ * @param {object} req - request object
+ * @param {object} res - response object
+ */
+exports.loginCheck = async (req, res) => {
+  if(req.session.user){
+    res.status(200).json({
+      success: true,
+      message: 'user is logged in'
+    });
+  } else {
+    res.status(200).json({
+      success: false,
+      message: 'user is not logged in'
+    });
+  }
+
+
+};
+
