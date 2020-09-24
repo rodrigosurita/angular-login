@@ -44,8 +44,7 @@ exports.logout = async (req, res) => {
     req.session.user = null;
 
     res.status(200).json({
-      success: true,
-      message: 'logged out'
+      success: true
     });
 };
 

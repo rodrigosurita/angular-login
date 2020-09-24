@@ -8,13 +8,15 @@ import { UserService } from '../user.service';
 })
 export class AdminComponent implements OnInit {
 
+  serverData = [];
+
   message = 'Loading...';
 
   constructor(private user: UserService) { }
 
   ngOnInit(): void {
     this.user.getSomeData().subscribe(data => {
-      this.message = data.message;
+      this.serverData = data.data;
     });
   }
 

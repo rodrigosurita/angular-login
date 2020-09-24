@@ -2,13 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-interface myData {
-  message: string,
-  success: boolean
-}
-
 interface logoutStatus {
-  status: boolean
+  success: boolean
 }
 
 @Injectable({
@@ -19,7 +14,7 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   getSomeData(){
-    return this.http.get<myData>('http://localhost:8081/api/database', {
+    return this.http.get<any>('/api/getData', {
       withCredentials: true
     });
   }

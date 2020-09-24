@@ -13,7 +13,7 @@ export class LogoutComponent implements OnInit {
 
   ngOnInit(): void {
     this.user.logout().subscribe(data => {
-      if(data.status){
+      if(data.success){
         this.router.navigate(['']);
       }
     });
