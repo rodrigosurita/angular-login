@@ -74,11 +74,13 @@ exports.getData = async (req, res) => {
       success: true,
       data:[
         {
-          name: 'Linkedin',
+          name: 'Rodrigo Surita da Silva',
+          description: 'Linkedin',
           url: 'https://www.linkedin.com/in/rodrigosurita/'
         },
         {
-          name:'Instagram',
+          name: 'Rodrigo Surita da Silva',
+          description:'Instagram',
           url:'https://www.instagram.com/rodrigosurita/'
         }
       ]
