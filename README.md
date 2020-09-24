@@ -3,8 +3,7 @@
 <h3 align="center">This is a simple login application built using NodeJS and Angular JS. It can save sessions, keep you logged in and get server data after you log-in</h3>
 <hr>
 
-
-![Demo](https://github.com/rodrigosurita/angular-login/blob/master/images/home.PNG?raw=true)
+![Demo](https://github.com/rodrigosurita/angular-login/blob/master/images/login.PNG?raw=true)
 
 ---------------------------------------------------------------
 
