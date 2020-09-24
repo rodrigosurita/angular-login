@@ -1,6 +1,8 @@
 
 <h1 align="center" style="border-bottom: none;">:busts_in_silhouette: Angular Login App!</h1>
 <h3 align="center">This is a simple login application built using NodeJS and Angular JS. It can save sessions, keep you logged in and get server data after you log-in</h3>
+<hr>
+
 
 ![Demo](https://github.com/rodrigosurita/angular-login/blob/master/images/home.PNG?raw=true)
 
@@ -14,7 +16,7 @@
 
 ## Configuring the app
 
-1. Install the dependencies
+1. Navigate to "./backend", install the node app dependencies
 
     ```
     npm install
@@ -40,7 +42,13 @@ Note: the NodeJS app is just an example, it validates only one fixed login, the 
     npm install -g @angular/cli
     ```
     
-2. Go to the root folder and run the application
+2. Go to the root folder and install the angular dependencies
+
+    ```
+    npm install
+    ```
+
+3. Go to the root folder and run the application
 
     ```
     npm start
