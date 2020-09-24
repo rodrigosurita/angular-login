@@ -25,13 +25,13 @@ export class UserService {
   }
 
   isLoggedIn(): Observable<any>{
-    return this.http.get<any>('http://localhost:8081/api/isloggedin',{
+    return this.http.get<any>('/api/auth/check',{
       withCredentials: true
     });
   }
 
   logout(){
-    return this.http.get<logoutStatus>('http://localhost:8081/api/logout',{
+    return this.http.get<logoutStatus>('/api/logout',{
       withCredentials: true
     });
   }

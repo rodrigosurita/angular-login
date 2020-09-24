@@ -20,12 +20,6 @@ export class AuthService {
     this.loggedInStatus = value;
   }
 
-  isLoggedIn(): Observable<any>{
-    return this.http.get<any>('/api/auth/check', {
-      withCredentials: true
-    });
-  }
-
   getUserDetails(username, password) {
     // post details to API server, return user info if correct
     return this.http.post<myData> ('/api/auth/submit', {

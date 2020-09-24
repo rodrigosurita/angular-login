@@ -56,6 +56,7 @@ exports.logout = async (req, res) => {
  * @param {object} res - response object
  */
 exports.loginCheck = async (req, res) => {
+  console.log('checandooo');
   if(req.session.user){
     res.status(200).json({
       success: true,
