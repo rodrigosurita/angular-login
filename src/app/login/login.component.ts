@@ -12,27 +12,26 @@ export class LoginComponent implements OnInit {
 
   constructor(private Auth: AuthService, private router: Router) { }
 
-  ngOnInit(): void {
-
-
-
-  }
+  ngOnInit(): void {}
 
   loginUser(event): void {
+
     event.preventDefault();
     const targetElement = event.target;
     const username = targetElement.querySelector('#username').value;
     const password = targetElement.querySelector('#password').value;
 
-    this.Auth.getUserDetails(username, password).subscribe(data => {
-      if(data.success){
-        this.Auth.setLoggedIn(true);
-        this.router.navigate(['admin']);
-      }else{
-        window.alert(data.message);
-      }
-    });
-
+    if(username && password){
+      this.Auth.getUserDetails(username, password).subscribe(data => {
+        if(data.success){
+          this.Auth.setLoggedIn(true);
+          this.router.navigate(['admin']);
+        }else{
+          window.alert(data.message);
+        }
+      });
+    } else {
+      window.alert('You need to inform an username and a password to continue.')
+    }
   }
-
 }

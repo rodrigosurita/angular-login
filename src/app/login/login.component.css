@@ -1,8 +1,15 @@
-body {
-  background: gray;
+.nav-wrapper > a {
+  margin-left: 15px;
 }
 
-:host {
-  display: block;
-  background:blue;
+.container{
+  height: calc(100vh - 64px);
 }
+
+@media only screen and (max-width: 600px) {
+  .container {
+    height: calc(100vh - 56px);
+  }
+}
+
+
