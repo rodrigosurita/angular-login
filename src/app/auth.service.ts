@@ -20,6 +20,10 @@ export class AuthService {
     this.loggedInStatus = value;
   }
 
+  get isLoggedIn(): boolean{
+    return this.loggedInStatus;
+  }
+
   getUserDetails(username, password) {
     // post details to API server, return user info if correct
     return this.http.post<myData> ('/api/auth/submit', {
