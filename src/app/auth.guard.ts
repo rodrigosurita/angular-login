@@ -30,12 +30,6 @@ export class AuthGuard implements CanActivate, CanActivateChild, CanDeactivate<u
           return false;
         }
       }));
-
-    /*  if(!this.auth.isLoggedIn){
-        //we might be logged in
-        this.router.navigate(['login']);
-      }
-    return this.auth.isLoggedIn;*/
   }
   canActivateChild(
     next: ActivatedRouteSnapshot,

@@ -21,7 +21,7 @@ export class AuthService {
   }
 
   isLoggedIn(): Observable<any>{
-    return this.http.get<any>('http://localhost:7000/auth/check', {
+    return this.http.get<any>('/api/auth/check', {
       withCredentials: true
     });
   }

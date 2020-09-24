@@ -7,10 +7,6 @@ interface myData {
   success: boolean
 }
 
-interface isLoggedIn {
-  status: boolean
-}
-
 interface logoutStatus {
   status: boolean
 }
@@ -28,8 +24,8 @@ export class UserService {
     });
   }
 
-  isLoggedIn(): Observable<isLoggedIn>{
-    return this.http.get<isLoggedIn>('http://localhost:8081/api/isloggedin',{
+  isLoggedIn(): Observable<any>{
+    return this.http.get<any>('http://localhost:8081/api/isloggedin',{
       withCredentials: true
     });
   }
